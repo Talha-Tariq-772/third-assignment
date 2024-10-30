@@ -1,0 +1,451 @@
+                
+             Assignment # 3  (SC)
+                                           Group # 7
+
+
+•	Talha Tariq (Team Lead)
+•	Daniyal Khalid (Developer)
+•	Saqib Tariq (Developer) 
+Submitted to : 
+                           Dr. Onaiza Maqbool
+
+
+
+
+
+Talha Tariq (04072213007)
+                                                                              
+ UC # 1
+
+ALLOCATE HOUSES
+
+       Primary actors: 
+•	Faculty Members
+•	Estate Office
+       Use case description:
+                                     In his process houses will be allocated to the faculty members on the basis of seniority. They will mail to estate office to show interest for getting house.
+       Stack holders and interests:     
+•	Faculty Member: 
+                                                                            They are the ones who would mail to the estate office, so that house would be allocated to them. 
+•	Estate Office : 
+                                                                       The estate office administration facilitate the requests and applies constraints to ensure valid request and person on basis of seniority. 
+                                                                       It will also carry out the whole process necessary to allocate house.                     
+                                                                        
+   Preconditions:
+                                  Faculty members must mail and show interest to get a house.
+
+      Postconditions:
+                              The house is allocated to faculty member. 
+     Main success scenario:
+1.	The Faculty Member mails to estate office.
+2.	The estate office administration verifies the person and request.
+3.	The estate office administration manages requests according to vacancies available.
+4.	The estate office administration allocates the house to faculty members.
+
+Alternate scenarios:
+•	The faculty member may mail again to cancel the previous request. The estate office administration then will exclude that specific request(of point # 2 in main success scenario).
+•	The estate office administration may find the person is not eligible to request a house (Junior staff) (of point # 2 in main success scenario).
+•	The estate office administration has not enough vacancies to facilitate all requests (of point # 3 in main success scenario).
+Inputs:
+1.	Request by Faculty member:
+o	Email by the faculty members to show interest for getting a house.
+o	Personal information of faculty member (name, department,  grade, seniority).
+2.	Available Houses:
+o	List of available (vacant) houses  by the estate office.
+3.	Verification constraints:
+o	Verification of eligibility of faculty member in terms of  grade .
+Outputs:
+1.	Confirmation Message:
+o	Confirmation  meassage regarding allocation of sent to the faculty member.
+2.	Updation of Record:
+o	The system updates house allocation records.
+
+
+
+
+
+………………………………………………………………………………………………………………………………………………………………………………………
+
+UC # 2
+                                                                                                                                                                   Apply for House Allocation
+
+Primary Actor:
+Faculty Member
+       Use case description:
+                                     In his process the faculty members apply for getting houses . They will mail application to estate office to take part in house allocation process.
+Stakeholders and Interests:
+•	Faculty Member: who applies for a house based on their grade and seniority.
+•	Estate Office: who to receives  applications and make sure that allocation of houses based seniority.
+Precondition:
+•	The faculty members should be eligible for application based on their grades.
+•	The house should be available (vacant or unallocated).
+•	The estate office should invite for applications.
+Main Success Scenario:
+1.	The estate office invites faculty members based on their grade when house becomes vacant.
+2.	The faculty member view the list of unallocated houses.
+3.	The faculty member submits an application for a specific house (if the number of vacant houses are more than one).
+4.	The system applies security constraints to validate the eligibility of faculty member .
+5.	The application successfully submitted to the system.
+Postcondition:
+•	The system generates a confirmation message that the application is submitted succesfully.
+ Alternate Scenarios:
+•	The system generates error meassage and does not allow the submission of application if  the faculty member is ineligible (Alternate Scenario of the point # 4 in main success scenario) .
+Inputs:
+1.	House Vacancy Information: 
+o	List of available (vacant)  houses issued by the estate office).
+
+2.	Application :
+o	Faculty’s information in terms of application they are going to submit to the house allocation system .
+
+.
+Outputs:
+1.	Application Submission:
+o	Confirmation message after the application have been submitted.
+
+
+
+………………………………………………………………………………………………………………………………………………………………………………..
+
+
+UC # 3
+                                                                                                                               Resolve Application Issues
+
+Primary Actor:
+Estate Office
+       Use case description:
+                                     In his process the issues that encounters in application process would be resolved by estate office.
+Stakeholders and Interests: 
+•	Estate Office: Who is responsible to resolve the issues that arises during house allocation system.
+•	Faculty Member: Who wants a transparent system so that their application should be considered fairly.
+Precondition:
+•	Faculty member have submitted application for house application.
+•	A conflict is arises in application process (more than one  applicants with the equal  grade or seniority , the number of houses are less as compared to  applicants of the equal grade or seniority).
+Main Success Scenario :
+1.	The estate office encounters an issue during the house allocation process  such as there are more than one  applicants with the equal  grade or seniority , the number of houses are less as compared to  applicants of the equal grade or seniority .
+2.	The system generate message about the issue to estate office.
+3.	The estate office view  information of all  applicants that are part of the conflict.
+4.	The estate office applies some conflict resolving mechanism, such as:
+o	By applying additional seniority constraint to applicants (years of service or performance in their whole service era , number of achievements ).
+o	By applying specific internal guidelines ( tenure, department priority).
+5.	The estate office cope with the conflict and finalizes the list of allotted faculty members.
+6.	The estate office sent the letters to the allotted faculty members, to inform them about the decision.
+7.	The system then updates the status of the allocation record.
+Postcondition:
+•	The conflict issue encounters in application process is resolved.
+•	 The allocation system is updated , and the houses are allocated to selected faculty members.
+Alternate scenarios:
+•	 If the number of houses are insufficient and no solution is possible , the estate office creates a waiting list of faculty members to give them priority in future availability (Alternate scenario of the point # 4 in main success scenario).
+Inputs:
+1.	Conflict Details:
+o	List of all applicants involved in the conflict (bases on same grade or seniority).
+o	Number of available houses.
+2.	Resolution Policies:
+o	Additional factors and constraints such as Internal guidelines for resolving the issue (tenure , department priority, number of achievements ,years of whole service era).
+
+Outputs:
+1.	Final Decision:
+o	Finalized list of house allotments after resolving the issue.
+2.	Informing or communication:
+o	Letters sent to newly allotted.
+3.	System Updates:
+o	The system updates  the allocated records.
+
+………………………………………………………………………………………………………………………………………………………………………….
+
+
+
+
+
+
+
+
+
+                                                            System Sequence Diagram for Allocate Houses Use Case 
+                                                                                                          
+                                        
+
+         
+                                            
+                                                                                                          Estate Office                              
+                                                                                                                                                      Verify Faculty Details(faculty info)
+                                                                                                                                                                                                                                                       Verification Status (Eligible/Not Eligible)
+                                                                                                                                                                                                        Check Available Houses() 
+                                                                                                                                                                                                                                                       List Of Available Houses(list)
+                                                                                                                                                                                                        Update House Allocation Records(list of allocated houses)          
+                                                                                                                                                                                                                                               Record Updated(new record)                                                                                                                                                                                                       
+
+
+
+                                             ………………………………………………………………………………………………………………………………………………………………………………………….
+ DANIYAL KHALIL (04072213050)
+UC #4: 
+Faculty adds requests for House maintenance.
+Primary Actor:
+- Faculty Member
+Stake holders and Interests:
+1.	Faculty Members:
+Interest: To receive timely allocation of housing based on their seniority and to easily made, view and manage their housing requests. They also want to ensure that maintenance issues are resolved promptly.
+2.	Estate Office:
+Interest: To efficiently manage the allocation of houses, maintain accurate records of house information and statuses, and ensure that the allocation process is fair and transparent based on faculty seniority.
+3.	Maintenance Department:
+Interest: To receive and address maintenance requests promptly, track the fulfillment of these requests, and ensure that faculty members have a safe and comfortable living environment.
+4.	University Administration:
+Interest: To oversee the housing allocation process, ensure compliance with university policies, and maintain faculty satisfaction, which can impact retention and recruitment.
+Preconditions:
+- The faculty member must be signed up into the Faculty Housing Management System.
+Postconditions:
+- The faculty member successfully adds a request for the house maintenance.
+
+
+
+
+Inputs and Outputs:
+Inputs:
+-	Login credentials (username and password), maintenance request details (description of the problem,etc.).
+Outputs:
+-	Success message, confirmation message after submission, request ID.
+Basic Flow:
+1.	The faculty member logs into the Faculty Housing Management System.
+2.	The system validates the identity of the faculty member.
+3.	If the identity is valid, the system redirects the user to the page having multiple options related to house allocation and others.
+4.	The faculty member selects the option to make a request for house maintenance.
+5.	The system asks for necessary information that is being used further.
+6.	Faculty enters the problem with the description.
+7.	 System approves, send complaint to the maintenance department and displays the request ID and redirect user to homepage.
+Alternate Flow:
+*a). At any state if the system fails:
+1.	User can reload it, login and request recovery of prior state.
+2.	System loads/constructs the prior state.
+*b). System keeps track of users process so that user can continue it if he/she had left.
+2a). If the faculty member's identification is invalid while login, the system will display an error message to the faculty member to try logging in again.
+Frequency of occurrence:
+-it can only occur once by each of faculty whenever system announce vacancy. 
+Special requirements:
+1.	Accessibility: The system should be accessible to users with disabilities.
+2.	Notification System: Automated email/SMS notifications for request approved.
+
+
+UC #5: 
+Faculty viewing request’s status for House Allocation.
+Primary Actor:
+- Faculty Member
+Stake holders and Interests:
+1.	Faculty Members:
+Interest: To receive timely allocation of housing based on their seniority and to easily made, view and manage their housing requests. They also want to ensure that maintenance issues are resolved promptly.
+2.	Estate Office:
+Interest: To efficiently manage the allocation of houses, maintain accurate records of house information and statuses, and ensure that the allocation process is fair and transparent based on faculty seniority.
+3.	Maintenance Department:
+Interest: To receive and address maintenance requests promptly, track the fulfillment of these requests, and ensure that faculty members have a safe and comfortable living environment.
+4.	University Administration:
+Interest: To oversee the housing allocation process, ensure compliance with university policies, and maintain faculty satisfaction, which can impact retention and recruitment.
+Preconditions:
+- The faculty member must have already signed up into the Faculty Housing Management System.
+- The faculty member must have a request being made for house allocation so that he/she can view its status.
+Postconditions:
+- The faculty member successfully views the status of their house allocation requests.
+
+
+Inputs and Outputs:
+Inputs:
+Login credentials, request ID (for viewing specific allocation status).
+Outputs:
+Success message confirmation message after submission, Request status and description.
+
+Basic Flow:
+1.	The faculty member logs into the Faculty Housing Management System.
+2.	The system validates the identity of the faculty member.
+3.	If the identity is valid, the system presents multiple options, including the ability to view the request’s status.
+4.	The faculty member selects the option to view the status of their house allocation request.
+5.	The system checks if the faculty member has made a request for house allocation.
+6.	If validated, the system requests for ID of request from user.
+7.	User enters request ID.
+8.	System displays the status of the request and necessary information along with it.
+9.	The faculty member views the status of his/her requests.
+Alternate Flow:
+*a). At any state if the system fails
+3.	User can reload it, login and request recovery of prior state.
+4.	System loads/constructs the prior state.
+2a). If the faculty member's identification is invalid while login, the system will display an error message to the faculty member to try logging in again.
+5a). If the Faculty had not made any request, then the system will display an error message and send the user to the previous page. 
+6a) If Faculty want to see all the requests that were made then faculty click request history to get the list of all the requests with their related information.
+
+Frequency of occurrence:
+The frequency of occurrence can be continuous.
+Special requirements:
+-	 -NIL-
+
+SYSTEM SEQUENCE DIAGRAM OF ASSIGNMENT 2 USECASE :
+ 
+
+
+
+
+
+
+
+UC #6:
+ Faculty withdraws requests for House Maintenance. 
+Primary Actor:
+- Faculty Member
+Stake holders and Interests:
+1.	Faculty Members:
+Interest: To receive timely allocation of housing based on their seniority and to easily made, view and manage their housing requests. They also want to ensure that maintenance issues are resolved promptly.
+2.	Estate Office:
+Interest: To efficiently manage the allocation of houses, maintain accurate records of house information and statuses, and ensure that the allocation process is fair and transparent based on faculty seniority.
+3.	Maintenance Department:
+Interest: To receive and address maintenance requests promptly, track the fulfillment of these requests, and ensure that faculty members have a safe and comfortable living environment.
+4.	University Administration:
+Interest: To oversee the housing allocation process, ensure compliance with university policies, and maintain faculty satisfaction, which can impact retention and recruitment.
+Preconditions:
+- The faculty member must be signed up into the Faculty Housing Management System.
+- The faculty member must have a request being made for House Maintenace so that he/she can cancel it.
+Postconditions:
+- The faculty member successfully withdraws his/her house Maintenace requests.
+Inputs and Outputs:
+Inputs:
+Login credentials 
+Outputs:
+ Request list of faculty and confirmation message of the request withdrawal.
+Basic Flow:
+1.	The faculty member logs into the Faculty Housing Management System.
+2.	The system validates the identity of the faculty member.
+3.	If the identity is valid, the system presents multiple options and features.
+4.	Faculty members select the maintenance request option that is being displayed by the system.
+5.	Faculty member select the Withdraw button.
+6.	The system displays the list of the requests that are made by him/her and are still pending.
+7.	Faculty selects the request that is being withdrawn.
+8.	The system cancels the request and updates it to the maintenance office.
+
+Alternate Flow:
+*a). At any state if the system fails
+1.	User can reload it, login and request recovery of prior state.
+2.	System loads/constructs the prior state.
+2). If the faculty member's identification is invalid while login, the system will display an error message to the faculty member to try logging in again.
+5). If the Faculty had not made any request, then the system will display an error message and send the user to the previous page. 
+Frequency of occurrence:
+-	The frequency of occurrence can be continuous.
+Special Requirements:
+-	The system should ensure data integrity during request withdrawals
+
+                     ………………………………………………………………………………………………………………………………………………………………………………………………..
+MUHAMMAD SAQIB TARIQ (04072213009)
+
+UC #7 - Manage House Information
+Primary Actor: Estate Office Staff
+Stakeholders and Interests:
+1.	Estate Office Staff: Wants to efficiently manage house records.
+2.	System Administrator: Ensures data integrity and security of house information.
+Preconditions:
+•	Estate Office Staff is logged in the system.
+•	Existing house records are in the system, including details like house ID, location, and status.
+Postconditions:
+•	The house data in the system is accurately updated/maintained.
+Input/output:
+•	User name/passwords, house id  ,location, type, status are the inputs of the system.
+•	Confirmation messages, error messages and other task completion messages are the outputs of the system. 
+Main Success Scenario:	
+1.	Estate Office Staff accesses the "Manage House Information" interface.
+2.	The system displays all houses with their allocation status.
+3.	Estate Office Staff can perform the following actions:
+             Add New House:
+•	Inputs house information, including house ID, location, type, and status.
+•	Confirms the new house record is saved.
+      Update House Status:
+•	Selects a specific house and modifies the status.
+•	Confirms the change to update the record.
+Delete House:
+•	Chooses a house and confirms deletion.
+      4.   The system saves updates to the database.
+Extensions:
+•	1a. Invalid Data Entry: The system alerts the user to correct incomplete or incorrectly formatted information.
+•	1b. Duplicate House ID: If a house ID already exists, the system prompts for a unique ID.
+Special Requirements:
+•	The system should validate data formats (e.g., proper formatting of house ID).
+•	Data changes should be logged to track record modifications for security purposes.
+Frequency of occurrence: 
+       The occurrence here can be continuous.
+
+UC #8 - Announce Vacancies
+Primary Actor: Estate Office Staff
+Stakeholders and Interests:
+•	Estate Office Staff: Effectively announces vacancies to faculty.
+•	Faculty Members: Interested in receiving updates on house availability.
+Preconditions:
+•	The Estate Office Staff is logged in.
+Postconditions:
+•	Eligible faculty members are notified about available vacancies.
+Input/output:
+•	User name/passwords are the inputs of the system.
+•	Confirmation messages are the outputs of the system. 
+Main Success Scenario:
+1.	Estate Office Staff selects "Announce Vacancies."
+2.	The system displays unallocated houses.
+3.	Estate Office Staff chooses vacant houses for announcement.
+4.	The system identifies eligible faculty members by grade.
+5.	Notifications are sent to eligible faculty regarding the vacancies.
+6.	Faculty members can apply for these vacancies.
+Extensions:
+5a. Multiple House Announcements: Separate notifications are sent for each vacancy.
+Special Requirements:
+•	The system must support real-time notifications to faculty, with notifications delivered within 5 seconds.
+•	Faculty eligibility criteria should be configurable and maintained by the system administrator.
+Frequency of occurrence: 
+          Depends on the availability of houses
+                           
+                                                          System Sequence  Diagram
+
+ 
+                                   …………………………………………………………………………………………………………………………………………………………………………………………………………..
+                                                                         Date  Dictionary 
+DATA ELEMENTS:
+Field name	description	Type 	Length	Conditions
+Allotment_Log					Record of house allotments	Database	-	Includes Faculty ID, House ID, and Status.
+Allotment_Notice	Notice sent to faculty about house allocation.	String	250	Includes faculty and house details.
+Application_Date					Date when the application was submitted	Date	-	Must be in MM/DD/YYYY format.
+Confirmation_Deadline	Deadline for faculty to confirm allotment.	date	-	Valid Date required
+Confirmation_Status	               			Faculty’s response to allotment (Accepted or Declined)	String		10	Must reflect response
+Faculty_DB				Stores faculty details and applications	Database	-	Must include Faculty ID, Grade, and Seniority.
+Faculty_Grade		Faculty member’s grade level	String	20	Valid grade required.
+Faculty_ID	               				Unique ID for each faculty member.	Integer	5	Must be unique
+Faculty_Name	Full name of the faculty member	string	100	Required
+Followup_Reminder				Daily reminder to maintenance department for unresolved issues	String		250	Sent until issue is resolved.
+House Application	Request from faculty for house allocation.	string	250	Must include faculty details and preferences
+House ID	Unique identifier for a house	string	5	Must be unique for all houses
+House List	List of available houses	String 	500	Must include house details (ID, location).
+House_Location			House’s physical location	String		100	Must be valid.
+House_Status			Current status (Allocated or Unallocated	string	15	Must be updated.
+House_Status_DB				Tracks house allocation status	Database	-	Must update status regularly.
+House_Type	              			Type of house (e.g., apartment, bungalow	String		50	Valid house type required.
+Issue_Description		Detailed description of the issue	string	500	Required
+Issue_Status				Status of maintenance issue (Fulfilled or Unfulfilled).	String	15	Must be updated daily if unresolved.
+Issue_Type				Category of maintenance issue (e.g., plumbing, electrical)	String		100-150	Must be valid issue category.
+Login credentials	Username and the passward of the faculty	string	10	Must be unique for all users
+Maintenance_DB					Stores all maintenance requests and status updates	Database	-	Tracks issue resolution.
+Maintenance_Report				Report of house maintenance issues	string	250	Includes issue description.
+Request ID	Unique identifier for a maintenance request	string	10	Must be unique for all request
+Requests list	List of requests made by the faculty	-	-	Must include all requests
+Request status	State of the request	string	10	Can be fulfilled /unfulfilled
+Submission_Date					Date of issue report submission	Date	-	Must be in MM/DD/YYYY format.
+Seniority_Level				Faculty seniority ranking	Integer		3	Must reflect actual seniority
+
+DATA SUTRUCTURES:
+Faculty member
+= Faculty_ID + Faculty_Name + Faculty_Grade + Seniority_Level + Application_Date + (Preferred_House)
+Available houses
+= House_ID + House_Location + House_Type + House_Status
+House allotment notice
+= Faculty_ID + Faculty_Name + House_ID + House_Location + Allotment_Date + Confirmation_Deadline
+Interest confirmation
+= Faculty_ID + Faculty_Name + House_ID + Confirmation_Status + Confirmation_Date
+Maintenance issue report
+= Faculty_ID + House_ID + Issue_Type + Issue_Description + Submission_Date + Issue_Status
+Maintenance followup
+= Request_ID + House_ID + Issue_Type + Date_Reminder + Current_Status
+
+
+
+                                                    …………………………………………………………………………………………………………………………………………………………………………………………………………..
+                                  
+Domain Model Diagram:
+ 
+                           …………………………………………………………………………………………………………………………………………………………………………………………………………..
